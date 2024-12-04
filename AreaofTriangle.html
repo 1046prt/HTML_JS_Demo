@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <title>Area_Of_Triangle!</title>
+                <style>
+                    body 
+                    {
+                        background-color: #f4f4f4;
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                    }
+
+                    form
+                    {
+                        background-color: #ffffff;
+                        padding: 50px;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                        max-width: 400px;
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+
+                    input[type="text"]
+                    {
+                        padding: 12px;
+                        margin: 10px 0;
+                        width: 100%;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 18px;
+                    }
+
+                    input[type="submit"]
+                    {
+                        background-color: #007bff;
+                        color: white;
+                        padding: 10px ;
+                        margin:   0 15px 0 ;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        width: 100%;
+                        font-size: 16px;
+                        box-sizing: border-box;
+                    }
+
+                    input[type="submit"]:hover 
+                    {
+                        background-color: #0056b3;
+                    }
+
+                    input[type="submit"]:focus 
+                    {
+                        outline: none;
+                        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                    }
+                </style>
+        </head>
+    <body>
+        <form action="">
+            <label for="height">Enter Height</label>
+            <input type="text" name="Height" id="height"><br>
+            <label for="base">Enter base</label>
+            <input type="text" name="Base" id="base">
+            <input type="submit" value="Calculate" onclick="AOT()">
+            <script>
+                function AOT()
+{
+    let height=document.getElementById("height").value;
+    let base=document.getElementById("base").value;
+    let area=0.5*base*height;
+    document.write(area);
+}
+            </script>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html lang="en">
+    <head>
+        <title>Factorial of a number!</title>
+            <style>
+                body {
+                    background-color: #f4f4f4;
+                    font-family: Arial, sans-serif;
+                }
+                
+                form {
+                    background-color: #ffffff;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    max-width: 400px;
+                    margin: 50px auto;
+                }
+                
+                input[type="text"] {
+                    padding: 10px;
+                    margin: 10px 0;
+                    width: 100%;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+                
+                input[type="submit"] {
+                    background-color: #007bff;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    width: 100%;
+                }
+                
+                input[type="submit"]:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+    </head>
+        <body>
+            <form action="">
+                Enter a number:<input type="text" id="numb"> <br>
+                <input class="btn" type="submit" value="Calculate" onclick="fact()">
+            </form>
+            <script >
+                function fact()
+{
+    let num = document.getElementById("numb").value;
+    let answer=1;
+        for(let i=1; i<=num; i++)
+        {
+            answer=answer*i;
+        }
+        document.write("Factorial is: "+answer);
+} 
+
+            </script>
+        </body>
+</html>

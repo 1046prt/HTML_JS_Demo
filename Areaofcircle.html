@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Area of Circle!</title>
+            <style>
+                body {
+                        background-color: #f4f4f4;
+                        font-family: Arial, sans-serif;
+                    }
+                    
+                    form {
+                        background-color: #ffffff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        max-width: 400px;
+                        margin: 50px auto;
+                    }
+                    
+                    input[type="text"] {
+                        padding: 10px;
+                        margin: 10px 0;
+                        width: 100%;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    }
+                    
+                    input[type="submit"] {
+                        background-color: #007bff;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        width: 100%;
+                    }
+                    
+                    input[type="submit"]:hover {
+                        background-color: #0056b3;
+                    }
+            </style>
+    </head>
+        <body>
+                <form>
+                    Enter radius:<input type="text"  id="Radius"> <br>
+                    <input type="submit" value="Calculate" onclick="AOC()" >
+                </form>
+                <script >
+                    function AOC()
+                        {
+                            let radius=document.getElementById("Radius").value;
+                            let area=3.14*radius*radius;
+                            document.write("Area of circle: "+ area);
+                        }
+                </script>
+        </body>
+</html>

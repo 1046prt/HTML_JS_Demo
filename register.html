@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration For Next Semester</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f9; margin: 0; padding: 0; }
+        h1 { text-align: center; padding: 20px; background: #4CAF50; color: white; margin: 0; }
+        form { width: 40%; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        label { display: block; margin: 10px 0 5px; }
+        input, select { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 90%; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Registration For Next Semester</h1>
+    <form action="">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" placeholder="Enter Student Name"><br>
+
+        <label for="enrollment-number">Enrollment Number:</label>
+        <input type="text" id="enrollment-number" placeholder="Enter Enrollment Number"><br>
+
+        <label for="course">Course:</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="cse">B.Tech[CSE]</option>
+            <option value="ds-ai">B.Tech[DS AI]</option>
+            <option value="civil">B.Tech[CIVIL]</option>
+            <option value="mechanical">B.Tech[MECHANICAL]</option>
+        </select><br>
+
+        <label for="year">Select Year:</label>
+        <select id="year" onchange="choose()">
+            <option value="">Select Year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select><br>
+
+        <label for="sem">Select Semester:</label>
+        <select id="sem" onchange="subject()"></select><br>
+
+        <label for="subject">Your Subject:</label>
+        <select id="subject"></select><br>
+
+        <button type="submit">Register</button>
+    </form>
+    <script >
+        
+    function choose() {
+        var year = document.getElementById("year").value;
+        var sem = document.getElementById("sem");
+        sem.innerHTML = ''; 
+                                                                                                                                
+        sem.innerHTML = '<option value="">Select Semester</option>';
+        if (year === '1') {
+            sem.innerHTML += '<option value="1">Semester 1</option><option value="2">Semester 2</option>';
+        } else if (year === '2') {
+            sem.innerHTML += '<option value="3">Semester 3</option><option value="4">Semester 4</option>';
+        } else if (year === '3') {
+            sem.innerHTML += '<option value="5">Semester 5</option><option value="6">Semester 6</option>';
+        } else if (year === '4') {
+            sem.innerHTML += '<option value="7">Semester 7</option><option value="8">Semester 8</option>';
+        }
+    }
+                                                                                                                                
+    function subject() {
+        var sem = document.getElementById("sem").value;
+        var subject = document.getElementById("subject");
+        subject.innerHTML = ''; 
+        subject.innerHTML = '<option value="">Select Subject</option>';
+        if (sem === '1') {
+            subject.innerHTML = `
+                <option value="Math-I">Mathematics-I</option>
+                <option value="English">English Language Skills</option>
+                <option value="Basic-EE">Basic Electrical and Electronics Engineering</option>
+                <option value="Engineering-Physics">Engineering Physics</option>
+                <option value="Intro-DS-AI">Introduction to DS and AI</option>
+                <option value="Comp-Programming">Computer Programming</option>
+                <option value="Linux-Shell">Linux & Shell Programming Lab</option>
+            `;
+        } else if (sem === '2') {
+            subject.innerHTML = `
+                <option value="Math-II">Mathematics-II</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Environment">Environment Sciences</option>
+                <option value="DSP">Fundamentals of Digital Signal Processing</option>
+                <option value="Professional-Comm">Professional Communication</option>
+                <option value="Digital-Fab">Digital Fabrication</option>
+                <option value="Data-Structures">Data Structures</option>
+            `;
+        } else if (sem === '3') {
+            subject.innerHTML = `
+                <option value="IoT">Introduction to IoT</option>
+                <option value="OOP">Object Oriented Programming Concepts</option>
+                <option value="Math-III">Mathematics-III</option>
+                <option value="Managerial-Economics">Principles of Managerial Economics</option>
+                <option value="CRT-I">CRT-I</option>
+            `;
+        } else if (sem === '4') {
+            subject.innerHTML = `
+                <option value="Industry-Coding">Industry Coding Practice (Python and R)</option>
+                <option value="CRT-II">CRT-II</option>
+                <option value="Internship-I">Internship Program I</option>
+            `;
+        } else if (sem === '5') {
+            subject.innerHTML = `
+                <option value="Core-Courses">Core Courses (5)</option>
+                <option value="Elective-Core">Elective (Core)</option>
+                <option value="Indian-Knowledge">Essence of Indian Traditional Knowledge (Audit Course)</option>
+                <option value="CRT-III">CRT-III</option>
+            `;
+        } else if (sem === '6') {
+            subject.innerHTML = `
+                <option value="Core-Courses">Core Courses (5)</option>
+                <option value="Elective-Core">Elective (Core)</option>
+                <option value="Special-Project">Special Project / TIP / Capstone Project</option>
+                <option value="CRT-IV">CRT-IV</option>
+            `;
+        } else if (sem === '7') {
+            subject.innerHTML = `
+                <option value="Internship-II">Internship Program II / Thesis & Seminar</option>
+                <option value="Electives">Electives (4) + Professional/Discipline</option>
+                <option value="Humanities">Humanities Elective (1) (Digital Humanities)</option>
+            `;
+        } else if (sem === '8') {
+            subject.innerHTML = `
+                <option value="Internship-II">Internship Program II / Thesis & Seminar</option>
+                <option value="Electives">Electives (4) + Professional/Discipline</option>
+                <option value="Humanities">Humanities Elective (1) (Digital Humanities)</option>
+            `;
+        }
+    }
+
+
+    </script>
+</body>
+</html>
